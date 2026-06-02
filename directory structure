@@ -1,0 +1,25 @@
+# Create the project folder structure
+mkdir -p mutual_fund_analysis/{data/raw,data/processed,notebooks,sql,dashboard,reports}
+cd mutual_fund_analysis
+
+# Initialize Git
+git init
+
+# Create a basic .gitignore to avoid tracking large data files or virtual environments
+echo -e "env/\n.venv/\n__pycache__/\n.ipynb_checkpoints/\ndata/" > .gitignore
+
+# Create requirements.txt
+cat << EOF > requirements.txt
+pandas
+numpy
+matplotlib
+seaborn
+plotly
+sqlalchemy
+requests
+scipy
+jupyter
+EOF
+
+# Install dependencies
+pip install -r requirements.txt
